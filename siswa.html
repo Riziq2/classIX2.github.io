@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Profil Kelas XI IPA 1</title>
+
+  <!-- Tailwind CSS CDN & Config -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: { extend: {} }
+    }
+  </script>
+
+  <!-- Custom Component Styles -->
+  <style type="text/tailwindcss">
+    @layer components {
+      .card {
+        @apply bg-white dark:bg-gray-800 rounded-xl shadow-md p-6
+               hover:shadow-xl transition-transform transition-opacity
+               duration-700 opacity-0 translate-y-6;
+      }
+    }
+  </style>
+</head>
+
+<body class="bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-200 antialiased min-h-screen">
+
+  <!-- Skip Link for Accessibility -->
+  <a href="#main" class="sr-only focus:not-sr-only p-2 bg-indigo-600 text-white rounded">
+    Lompat ke konten utama
+  </a>
+
+  <!-- Header with Theme Toggle -->
+  <header class="bg-indigo-700 text-white py-8 shadow-lg relative">
+    <div class="container mx-auto px-4 md:px-6 lg:px-8 flex items-center justify-between">
+      <div>
+        <h1 class="text-3xl md:text-4xl font-extrabold">Nama Siswa Kelas IX-2 </h1>
+        <p class="mt-1 opacity-90">MTSN 3 Langkat</p>
+      </div>
+      <button
+        id="theme-toggle"
+        aria-label="Beralih ke mode gelap"
+        aria-pressed="false"
+        class="p-2 bg-white/30 rounded-full hover:bg-white/50 transition focus:outline-none focus:ring-2 focus:ring-indigo-300"
+      >
+        <svg id="icon-sun" xmlns="http://www.w3.org/2000/svg"
+             class="w-6 h-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path d="M12 3v2m0 14v2m9-9h-2M5 12H3
+                   m15.364-6.364l-1.414 1.414
+                   M6.05 17.95l-1.414 1.414
+                   m12.728 0l1.414-1.414
+                   M6.05 6.05l1.414-1.414" />
+          <circle cx="12" cy="12" r="5" />
+        </svg>
+        <svg id="icon-moon" xmlns="http://www.w3.org/2000/svg"
+             class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M21 12.79A9 9 0 1111.21 3
+                   a7 7 0 109.79 9.79z"/>
+        </svg>
+      </button>
+    </div>
+    <div class="absolute bottom-0 w-full overflow-hidden leading-none">
+      <svg viewBox="0 0 1200 100" class="w-full h-8">
+        <path d="M0,0 C600,100 600,0 1200,100 L1200,0 L0,0 Z" fill="white"/>
+      </svg>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main id="main" class="container mx-auto px-4 md:px-6 lg:px-8 py-10 space-y-12">
+
+    <!-- Search Field -->
+    <div class="flex justify-end">
+      <input
+        id="search"
+        type="text"
+        aria-label="Cari nama atau jabatan"
+        aria-controls="struktur-kelas"
+        placeholder="🔍 Cari nama atau jabatan..."
+        class="w-full md:w-1/3 p-2 border border-indigo-300 rounded-md
+               focus:ring focus:ring-indigo-300 transition"
+      />
+    </div>
+
+    <!-- Class Structure -->
+    <section
+      id="struktur-kelas"
+      role="region"
+      aria-live="polite"
+      class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
+    >
+      <article class="card" data-reveal>
+        <h3 class="text-xl font-semibold mb-1">Ketua Kelas</h3>
+        <p>Dzakwan Rafiq Harahap</p>
+      </article>
+
+      <article class="card" data-reveal>
+        <h3 class="text-xl font-semibold mb-1">Wakil Ketua</h3>
+        <p>Shohib Rizky Maulana</p>
+      </article>
+
+      <article class="card" data-reveal>
+        <h3 class="text-xl font-semibold mb-1">Sekretaris</h3>
+        <p>Haura Insyiah</p>
+      </article>
+
+      <article class="card" data-reveal>
+        <h3 class="text-xl font-semibold mb-1">Bendahara 1</h3>
+        <p>Zafira Khaifa Nakiya</p>
+      </article>
+
+      <article class="card" data-reveal>
+        <h3 class="text-xl font-semibold mb-1">Bendahara 2</h3>
+        <p>Khairuz Zafira</p>
+      </article>
+
+      <article class="card" data-reveal>
+        <h3 class="text-xl font-semibold mb-1">Siswa</h3>
+        <p>Riziq Fahrezzi</p>
+      </article>
+    </section>
+
+  </main>
+
+  <!-- Back to Top Button -->
+  <button
+    id="back-to-top"
+    hidden
+    aria-label="Kembali ke atas"
+    class="fixed bottom-6 right-6 bg-indigo-600 text-white p-3 rounded-full
+           shadow-lg hover:bg-indigo-700 transition focus:outline-none focus:ring-2 focus:ring-indigo-300"
+  >
+    ↑
+  </button>
+
+  <!-- Footer -->
+  <footer class="bg-indigo-900 text-white py-8">
+    <div class="container mx-auto px-4 text-center">
+      <p>© 2025 MTSN 3 Langkat. Dibuat oleh Siswa kelas IX-2.</p>
+      <p class="mt-2 text-indigo-300">Website dikelola bersama oleh seluruh siswa</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Theme Toggle
+      const btn        = document.getElementById('theme-toggle');
+      const iconSun    = document.getElementById('icon-sun');
+      const iconMoon   = document.getElementById('icon-moon');
+      const root       = document.documentElement;
+      const THEME_KEY  = 'theme';
+      const stored     = localStorage.getItem(THEME_KEY);
+      const prefers    = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      const initial    = stored || prefers;
+
+      function setTheme(mode) {
+        const dark = mode === 'dark';
+        root.classList.toggle('dark', dark);
+        btn.setAttribute('aria-pressed', dark);
+        btn.setAttribute('aria-label', dark ? 'Beralih ke mode terang' : 'Beralih ke mode gelap');
+        iconSun.classList.toggle('hidden', !dark);
+        iconMoon.classList.toggle('hidden', dark);
+      }
+
+      setTheme(initial);
+      btn.addEventListener('click', () => {
+        const next = root.classList.contains('dark') ? 'light' : 'dark';
+        setTheme(next);
+        localStorage.setItem(THEME_KEY, next);
+      });
+
+      // Smooth transition
+      root.style.transition = 'background-color .3s, color .3s';
+
+      // Scroll reveal
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('opacity-100', 'translate-y-0');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1 });
+
+      document.querySelectorAll('[data-reveal]').forEach(el => observer.observe(el));
+
+      // Back to top
+      const btnTop = document.getElementById('back-to-top');
+      window.addEventListener('scroll', () => btnTop.hidden = window.scrollY < 300);
+      btnTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+      // Search filter
+      const input = document.getElementById('search');
+      const cards = document.querySelectorAll('.card');
+      input.addEventListener('input', () => {
+        const query = input.value.toLowerCase().trim();
+        cards.forEach(card => {
+          card.style.display = card.textContent.toLowerCase().includes(query) ? '' : 'none';
+        });
+      });
+    });
+  </script>
+</body>
+</html>
