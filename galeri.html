@@ -17,159 +17,249 @@
     </div>
   </header>
 
-  <!-- Category Navigation (tanpa “Semua Foto”) -->
+  <!-- Category Navigation -->
   <div class="container mx-auto px-4 py-6">
     <div class="flex flex-wrap justify-center gap-4">
       <button
-        class="category-btn active px-6 py-2 rounded-full bg-indigo-600 text-white hover:bg-indigo-700 transition-colors"
-        data-category="all-students">
+        role="button"
+        tabindex="0"
+        class="category-btn active px-6 py-2 rounded-full bg-indigo-600 text-white transition-colors"
+        data-category="all-students"
+        aria-pressed="true">
         Foto Bersama
       </button>
       <button
+        role="button"
+        tabindex="0"
         class="category-btn px-6 py-2 rounded-full bg-indigo-100 text-indigo-600 hover:bg-indigo-600 hover:text-white transition-colors"
-        data-category="girls">
+        data-category="girls"
+        aria-pressed="false">
         Siswi Perempuan
       </button>
       <button
+        role="button"
+        tabindex="0"
         class="category-btn px-6 py-2 rounded-full bg-indigo-100 text-indigo-600 hover:bg-indigo-600 hover:text-white transition-colors"
-        data-category="boys">
+        data-category="boys"
+        aria-pressed="false">
         Siswa Laki-laki
       </button>
     </div>
   </div>
 
   <!-- Gallery Grid -->
-<section class="container mx-auto px-4 py-12">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <!-- Foto Bersama -->
-            <div class="group relative overflow-hidden rounded-lg shadow-lg transition-all duration-300 hover:-translate-y-2 gallery-item" data-category="all-students">
-                <img src="img/fotbar.jpg" alt="Foto Bersama Kelas" class="w-full aspect-[4/3] object-cover rounded-lg shadow-lg">
-                <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                    <div class="text-white text-center p-4">
-                        <h3 class="text-xl font-bold">Foto Bersama</h3>
-                        <p class="mt-2">Seluruh Siswa Kelas IX-2</p>
-                    </div>
-                </div>
-            </div>
+  <section class="container mx-auto px-4 py-12">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
-            <div class="group relative overflow-hidden rounded-lg shadow-lg transition-all duration-300 hover:-translate-y-2 gallery-item" data-category="all-students">
-                <img src="img/fotbar1.jpg" alt="Foto Bersama Kelas" class="w-full aspect-[4/3] object-cover rounded-lg shadow-lg">
-                <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                    <div class="text-white text-center p-4">
-                        <h3 class="text-xl font-bold">Foto Bersama</h3>
-                        <p class="mt-2">Seluruh Siswa Kelas IX-2</p>
-                    </div>
-                </div>
-            </div>
+      <!-- Foto Bersama -->
+      <div
+        class="group relative overflow-hidden rounded-lg shadow-lg transition-all duration-300 hover:-translate-y-2 gallery-item"
+        data-category="all-students"
+        data-date="10 Maret 2025">
+        <img
+          src="img/fotbar.jpg"
+          alt="Foto Bersama Kelas"
+          loading="lazy"
+          class="w-full aspect-[4/3] object-cover rounded-lg shadow-lg">
+        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+          <div class="text-white text-center p-4">
+            <h3 class="text-xl font-bold">Foto Bersama</h3>
+            <p class="mt-2">Seluruh Siswa Kelas IX-2</p>
+          </div>
+        </div>
+      </div>
 
-            <div class="group relative overflow-hidden rounded-lg shadow-lg transition-all duration-300 hover:-translate-y-2 gallery-item" data-category="all-students">
-                <img src="img/fotbar2.jpg" alt="Foto Bersama Kelas" class="w-full aspect-[4/3] object-cover rounded-lg shadow-lg">
-                <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                    <div class="text-white text-center p-4">
-                        <h3 class="text-xl font-bold">Foto Bersama</h3>
-                        <p class="mt-2">Seluruh Siswa Kelas IX-2</p>
-                    </div>
-                </div>
-            </div>
+      <div
+        class="group relative overflow-hidden rounded-lg shadow-lg transition-all duration-300 hover:-translate-y-2 gallery-item"
+        data-category="all-students"
+        data-date="12 Maret 2025">
+        <img
+          src="img/fotbar1.jpg"
+          alt="Foto Bersama Kelas"
+          loading="lazy"
+          class="w-full aspect-[4/3] object-cover rounded-lg shadow-lg">
+        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+          <div class="text-white text-center p-4">
+            <h3 class="text-xl font-bold">Foto Bersama</h3>
+            <p class="mt-2">Seluruh Siswa Kelas IX-2</p>
+          </div>
+        </div>
+      </div>
 
-            <div class="group relative overflow-hidden rounded-lg shadow-lg transition-all duration-300 hover:-translate-y-2 gallery-item" data-category="all-students">
-                <img src="img/fotbar-cewe3.jpg" alt="Foto Bersama Kelas" class="w-full aspect-[4/3] object-cover rounded-lg shadow-lg">
-                <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                    <div class="text-white text-center p-4">
-                        <h3 class="text-xl font-bold">Foto Bersama</h3>
-                        <p class="mt-2">Seluruh Siswa Kelas IX-2</p>
-                    </div>
-                </div>
-            </div>
+      <div
+        class="group relative overflow-hidden rounded-lg shadow-lg transition-all duration-300 hover:-translate-y-2 gallery-item"
+        data-category="all-students"
+        data-date="14 Maret 2025">
+        <img
+          src="img/fotbar2.jpg"
+          alt="Foto Bersama Kelas"
+          loading="lazy"
+          class="w-full aspect-[4/3] object-cover rounded-lg shadow-lg">
+        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+          <div class="text-white text-center p-4">
+            <h3 class="text-xl font-bold">Foto Bersama</h3>
+            <p class="mt-2">Seluruh Siswa Kelas IX-2</p>
+          </div>
+        </div>
+      </div>
 
-            <div class="group relative overflow-hidden rounded-lg shadow-lg transition-all duration-300 hover:-translate-y-2 gallery-item" data-category="all-students">
-                <img src="img/fotbar4.jpg" alt="Foto Bersama Kelas" class="w-full aspect-[4/3] object-cover rounded-lg shadow-lg">
-                <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                    <div class="text-white text-center p-4">
-                        <h3 class="text-xl font-bold">Foto Bersama</h3>
-                        <p class="mt-2">Seluruh Siswa Kelas IX-2</p>
-                    </div>
-                </div>
-            </div>
+      <div
+        class="group relative overflow-hidden rounded-lg shadow-lg transition-all duration-300 hover:-translate-y-2 gallery-item"
+        data-category="all-students"
+        data-date="16 Maret 2025">
+        <img
+          src="img/fotbar-cewe3.jpg"
+          alt="Foto Bersama Kelas"
+          loading="lazy"
+          class="w-full aspect-[4/3] object-cover rounded-lg shadow-lg">
+        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+          <div class="text-white text-center p-4">
+            <h3 class="text-xl font-bold">Foto Bersama</h3>
+            <p class="mt-2">Seluruh Siswa Kelas IX-2</p>
+          </div>
+        </div>
+      </div>
 
-            <div class="group relative overflow-hidden rounded-lg shadow-lg transition-all duration-300 hover:-translate-y-2 gallery-item" data-category="all-students">
-                <img src="img/fotbar5.jpg" alt="Foto Bersama Kelas" class="w-full aspect-[4/3] object-cover rounded-lg shadow-lg">
-                <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                    <div class="text-white text-center p-4">
-                        <h3 class="text-xl font-bold">Foto Bersama</h3>
-                        <p class="mt-2">Seluruh Siswa Kelas IX-2</p>
-                    </div>
-                </div>
-            </div>
+      <div
+        class="group relative overflow-hidden rounded-lg shadow-lg transition-all duration-300 hover:-translate-y-2 gallery-item"
+        data-category="all-students"
+        data-date="18 Maret 2025">
+        <img
+          src="img/fotbar4.jpg"
+          alt="Foto Bersama Kelas"
+          loading="lazy"
+          class="w-full aspect-[4/3] object-cover rounded-lg shadow-lg">
+        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+          <div class="text-white text-center p-4">
+            <h3 class="text-xl font-bold">Foto Bersama</h3>
+            <p class="mt-2">Seluruh Siswa Kelas IX-2</p>
+          </div>
+        </div>
+      </div>
 
-      <!-- (… kopi ulang elemen all-students seperti sebelumnya …) -->
+      <div
+        class="group relative overflow-hidden rounded-lg shadow-lg transition-all duration-300 hover:-translate-y-2 gallery-item"
+        data-category="all-students"
+        data-date="20 Maret 2025">
+        <img
+          src="img/fotbar5.jpg"
+          alt="Foto Bersama Kelas"
+          loading="lazy"
+          class="w-full aspect-[4/3] object-cover rounded-lg shadow-lg">
+        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+          <div class="text-white text-center p-4">
+            <h3 class="text-xl font-bold">Foto Bersama</h3>
+            <p class="mt-2">Seluruh Siswa Kelas IX-2</p>
+          </div>
+        </div>
+      </div>
 
       <!-- Foto Siswi -->
-            <div class="group relative overflow-hidden rounded-lg shadow-lg transition-all duration-300 hover:-translate-y-2 gallery-item" data-category="girls">
-                <img src="img/fotbar-cewe.jpg" alt="Foto Siswi" class="w-full aspect-[4/3] object-cover rounded-lg shadow-lg">
-                <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                    <div class="text-white text-center p-4">
-                        <h3 class="text-xl font-bold">Kelompok Siswi</h3>
-                        <p class="mt-2">Kegiatan Siswi IX-2</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="group relative overflow-hidden rounded-lg shadow-lg transition-all duration-300 hover:-translate-y-2 gallery-item" data-category="girls">
-                <img src="img/fotbar-cewe2.jpg" alt="Foto Siswi" class="w-full aspect-[4/3] object-cover rounded-lg shadow-lg">
-                <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                    <div class="text-white text-center p-4">
-                        <h3 class="text-xl font-bold">Kelompok Siswi</h3>
-                        <p class="mt-2">Kegiatan Siswi IX-2</p>
-                    </div>
-                </div>
-            </div>
+      <div
+        class="group relative overflow-hidden rounded-lg shadow-lg transition-all duration-300 hover:-translate-y-2 gallery-item"
+        data-category="girls"
+        data-date="15 April 2025">
+        <img
+          src="img/fotbar-cewe.jpg"
+          alt="Foto Siswi"
+          loading="lazy"
+          class="w-full aspect-[4/3] object-cover rounded-lg shadow-lg">
+        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+          <div class="text-white text-center p-4">
+            <h3 class="text-xl font-bold">Kelompok Siswi</h3>
+            <p class="mt-2">Kegiatan Siswi IX-2</p>
+          </div>
+        </div>
+      </div>
 
-            <div class="group relative overflow-hidden rounded-lg shadow-lg transition-all duration-300 hover:-translate-y-2 gallery-item" data-category="girls">
-                <img src="img/fotbar-cewe3.jpg" alt="Foto Siswi" class="w-full aspect-[4/3] object-cover rounded-lg shadow-lg">
-                <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                    <div class="text-white text-center p-4">
-                        <h3 class="text-xl font-bold">Kelompok Siswi</h3>
-                        <p class="mt-2">Kegiatan Siswi IX-2</p>
-                    </div>
-                </div>
-            </div>
+      <div
+        class="group relative overflow-hidden rounded-lg shadow-lg transition-all duration-300 hover:-translate-y-2 gallery-item"
+        data-category="girls"
+        data-date="17 April 2025">
+        <img
+          src="img/fotbar-cewe2.jpg"
+          alt="Foto Siswi"
+          loading="lazy"
+          class="w-full aspect-[4/3] object-cover rounded-lg shadow-lg">
+        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+          <div class="text-white text-center p-4">
+            <h3 class="text-xl font-bold">Kelompok Siswi</h3>
+            <p class="mt-2">Kegiatan Siswi IX-2</p>
+          </div>
+        </div>
+      </div>
 
-      <!-- (… kopi ulang elemen girls seperti sebelumnya …) -->
+      <div
+        class="group relative overflow-hidden rounded-lg shadow-lg transition-all duration-300 hover:-translate-y-2 gallery-item"
+        data-category="girls"
+        data-date="19 April 2025">
+        <img
+          src="img/fotbar-cewe3.jpg"
+          alt="Foto Siswi"
+          loading="lazy"
+          class="w-full aspect-[4/3] object-cover rounded-lg shadow-lg">
+        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+          <div class="text-white text-center p-4">
+            <h3 class="text-xl font-bold">Kelompok Siswi</h3>
+            <p class="mt-2">Kegiatan Siswi IX-2</p>
+          </div>
+        </div>
+      </div>
 
       <!-- Foto Siswa -->
-            <div class="group relative overflow-hidden rounded-lg shadow-lg transition-all duration-300 hover:-translate-y-2 gallery-item" data-category="boys">
-                <img src="img/fotbar-cowo.jpg" alt="Foto Siswa" class="w-full aspect-[4/3] object-cover rounded-lg shadow-lg">
-                <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                    <div class="text-white text-center p-4">
-                        <h3 class="text-xl font-bold">Kelompok Siswa</h3>
-                        <p class="mt-2">Kegiatan Siswa IX-2</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="group relative overflow-hidden rounded-lg shadow-lg transition-all duration-300 hover:-translate-y-2 gallery-item" data-category="boys">
-                <img src="img/fotbar-cowo2.jpg" alt="Foto Siswa" class="w-full aspect-[4/3] object-cover rounded-lg shadow-lg">
-                <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                    <div class="text-white text-center p-4">
-                        <h3 class="text-xl font-bold">Kelompok Siswa</h3>
-                        <p class="mt-2">Kegiatan Siswa IX-2</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="group relative overflow-hidden rounded-lg shadow-lg transition-all duration-300 hover:-translate-y-2 gallery-item" data-category="boys">
-                <img src="img/fotbar-cowo3.jpg" alt="Foto Siswa" class="w-full aspect-[4/3] object-cover rounded-lg shadow-lg">
-                <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                    <div class="text-white text-center p-4">
-                        <h3 class="text-xl font-bold">Kelompok Siswa</h3>
-                        <p class="mt-2">Kegiatan Siswa IX-2</p>
-                    </div>
-                </div>
-            </div>
-
+      <div
+        class="group relative overflow-hidden rounded-lg shadow-lg transition-all duration-300 hover:-translate-y-2 gallery-item"
+        data-category="boys"
+        data-date="22 April 2025">
+        <img
+          src="img/fotbar-cowo.jpg"
+          alt="Foto Siswa"
+          loading="lazy"
+          class="w-full aspect-[4/3] object-cover rounded-lg shadow-lg">
+        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+          <div class="text-white text-center p-4">
+            <h3 class="text-xl font-bold">Kelompok Siswa</h3>
+            <p class="mt-2">Kegiatan Siswa IX-2</p>
+          </div>
         </div>
-    </section>
+      </div>
+
+      <div
+        class="group relative overflow-hidden rounded-lg shadow-lg transition-all duration-300 hover:-translate-y-2 gallery-item"
+        data-category="boys"
+        data-date="24 April 2025">
+        <img
+          src="img/fotbar-cowo2.jpg"
+          alt="Foto Siswa"
+          loading="lazy"
+          class="w-full aspect-[4/3] object-cover rounded-lg shadow-lg">
+        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+          <div class="text-white text-center p-4">
+            <h3 class="text-xl font-bold">Kelompok Siswa</h3>
+            <p class="mt-2">Kegiatan Siswa IX-2</p>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="group relative overflow-hidden rounded-lg shadow-lg transition-all duration-300 hover:-translate-y-2 gallery-item"
+        data-category="boys"
+        data-date="26 April 2025">
+        <img
+          src="img/fotbar-cowo3.jpg"
+          alt="Foto Siswa"
+          loading="lazy"
+          class="w-full aspect-[4/3] object-cover rounded-lg shadow-lg">
+        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+          <div class="text-white text-center p-4">
+            <h3 class="text-xl font-bold">Kelompok Siswa</h3>
+            <p class="mt-2">Kegiatan Siswa IX-2</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
 
   <!-- Footer -->
   <footer class="bg-indigo-900 text-white py-8">
@@ -179,39 +269,107 @@
     </div>
   </footer>
 
-  <!-- Category Filter Script -->
+  <!-- Lightbox Modal -->
+  <div
+    id="lightbox"
+    class="fixed inset-0 bg-black/70 hidden items-center justify-center z-50">
+    <div class="bg-white rounded-lg overflow-hidden flex max-w-4xl w-full mx-4">
+      
+      <!-- Full Image -->
+      <div class="flex-1 bg-black">
+        <img
+          id="lightbox-img"
+          src=""
+          alt="Full Size"
+          class="w-full h-full object-contain">
+      </div>
+      
+      <!-- Date Info -->
+      <div class="flex-1 p-6 relative">
+        <button
+          id="lightbox-close"
+          class="absolute top-4 right-4 text-gray-500 hover:text-gray-700 text-2xl leading-none">
+          &times;
+        </button>
+        <h3 class="text-xl font-bold mb-4">Detail Foto</h3>
+        <p id="lightbox-date" class="text-gray-700"></p>
+      </div>
+      
+    </div>
+  </div>
+
+  <!-- Scripts -->
   <script>
-    document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', () => {
+      // Category filter
       const categoryButtons = document.querySelectorAll('.category-btn');
       const galleryItems    = document.querySelectorAll('.gallery-item');
 
-      // Fungsi untuk memfilter
       function filterCategory(cat) {
         galleryItems.forEach(item => {
-          item.style.display = item.dataset.category === cat ? 'block' : 'none';
+          const show = cat === 'all-students' || item.dataset.category === cat;
+          item.classList.toggle('hidden', !show);
         });
       }
 
-      // Atur default: Foto Bersama
+      function setActive(btn) {
+        categoryButtons.forEach(b => {
+          const isActive = b === btn;
+          b.classList.toggle('active', isActive);
+          b.classList.toggle('bg-indigo-600', isActive);
+          b.classList.toggle('text-white', isActive);
+          b.classList.toggle('bg-indigo-100', !isActive);
+          b.classList.toggle('text-indigo-600', !isActive);
+          b.setAttribute('aria-pressed', isActive);
+        });
+      }
+
+      // default state
+      setActive(categoryButtons[0]);
       filterCategory('all-students');
 
       categoryButtons.forEach(button => {
         button.addEventListener('click', () => {
-          // Reset semua tombol
-          categoryButtons.forEach(btn => {
-            btn.classList.remove('active', 'bg-indigo-600', 'text-white');
-            btn.classList.add('bg-indigo-100', 'text-indigo-600');
-          });
-
-          // Aktifkan tombol yang diklik
-          button.classList.add('active', 'bg-indigo-600', 'text-white');
-          button.classList.remove('bg-indigo-100', 'text-indigo-600');
-
+          setActive(button);
           filterCategory(button.dataset.category);
         });
+        button.addEventListener('keydown', e => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            button.click();
+          }
+        });
+      });
+
+      // Lightbox
+      const lightbox = document.getElementById('lightbox');
+      const lbImg    = document.getElementById('lightbox-img');
+      const lbDate   = document.getElementById('lightbox-date');
+      const lbClose  = document.getElementById('lightbox-close');
+
+      document.querySelectorAll('.gallery-item img').forEach(img => {
+        img.addEventListener('click', e => {
+          const wrapper = e.currentTarget.closest('.gallery-item');
+          lbImg.src     = e.currentTarget.src;
+          lbDate.textContent = 'Diambil pada: ' + (wrapper.dataset.date || 'Tanggal tidak tersedia');
+          lightbox.classList.remove('hidden');
+          lightbox.classList.add('flex');
+        });
+      });
+
+      function closeLb() {
+        lightbox.classList.add('hidden');
+        lightbox.classList.remove('flex');
+      }
+
+      lbClose.addEventListener('click', closeLb);
+      lightbox.addEventListener('click', e => {
+        if (e.target === lightbox) closeLb();
+      });
+      document.addEventListener('keydown', e => {
+        if (e.key === 'Escape') closeLb();
       });
     });
   </script>
-
 </body>
 </html>
